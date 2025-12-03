@@ -17,5 +17,5 @@ As an ACTOR I can FEATURE so I can BENEFIT.
 
 # Tasks
 
-- During the iteration, break the story down into a list of <1-day tasks.
-- To assign a task, turn it into a sub-issue and assign.
+- [ ] During the iteration, break the story down into a list of <1-day tasks.
+- [ ] To assign a task, turn it into a sub-issue and assign.
