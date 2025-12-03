@@ -1,7 +1,7 @@
 ---
 name: User Story Template
-about: 'USER STORY: Add a brief description'
-title: ''
+about: A template for user stories
+title: 'User Story: Enter a brief title'
 labels: must-have
 assignees: ''
 
