@@ -1,5 +1,5 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def portfolio(request):
-    return HttpResponse("The portfolio view is working.")
+    return render(request, "portfolio/portfolio.html")
