@@ -1,36 +1,84 @@
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta 
-        name="description"
-        content="Quality Shares, information and education for investors seeking high-quality companies and high-quality returns."
-    >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quality Shares, information and education for investors seeking high-quality companies and high-quality returns."
+    />
     <title>Quality Shares</title>
     <!-- Bootstrap link -->
-     <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-        crossorigin="anonymous"
-    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <!-- Favicon.io links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicons/apple-touch-icon.png" %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicons/favicon-32x32.png" %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicons/favicon-16x16.png" %}">
-    <link rel="manifest" href="{% static "favicons/site.webmanifest" %}">
-
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header>Base Header</header>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'favicons/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'favicons/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'favicons/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}" />
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <!-- flex-column and min-vh-100 enable footer to stick to bottom -->
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container">
+          <a href="#" class="navbar-brand">LOGO</a>
+          <h1 class="me-auto">Quality Shares</h1>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="btn btn-primary me-1">Sign up</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Archive</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
-        <p>Base Main</p>
-        {% block content %}
-        <!-- Add content here using child templates -->
-        {% endblock content %}
+      {% block content %}
+      <!-- Add content here using child templates -->
+      {% endblock content %}
     </main>
-    <footer>Base Footer</footer>
-</body>
+    <!-- mt-auto allows footer to stick to bottom of screen -->
+    <footer class="mt-auto">Base Footer</footer>
+  </body>
 </html>
