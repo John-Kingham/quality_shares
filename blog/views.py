@@ -1,7 +1,21 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import Post
 
 
-def test(request):
-    """Returns a response with a test message."""
-    return HttpResponse("blog app is working")
+class PostListView(ListView):
+    """
+    Renders the blog post archive page.
+
+    Models:
+        :model:`blog.Post`
+
+    Template:
+        :template:`blog/post_list.html`
+
+    Context:
+        posts (QuerySet): All published posts.
+    """
+
+    model = Post
+    queryset = Post.objects.filter(published=True)
+    context_object_name = "posts"
