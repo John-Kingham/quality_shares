@@ -1,4 +1,7 @@
 {% load static %}
+{% url "post-list" as post_list_url %}
+{% url "portfolio" as portfolio_url %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -51,7 +54,8 @@
           <a href="#" class="navbar-brand">
             <img src="{% static 'images/logo-50x50.png' %}" alt="logo" />
           </a>
-          <h1 id="site-title"
+          <h1
+            id="site-title"
             class="position-absolute top-50 start-50 translate-middle d-md-inline"
           >
             Quality Shares
@@ -70,16 +74,22 @@
       <nav id="main-nav" class="navbar navbar-expand">
         <div class="container justify-content-center">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item main-nav-item">
               <a href="#" class="nav-link">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Archive</a>
+            <li class="nav-item main-nav-item">
+              <a
+                href="{% url 'post-list' %}"
+                class="nav-link {% if request.path == post_list_url %}active" aria-current="page{% endif %}">Archive</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Portfolio</a>
+            <li class="nav-item main-nav-item">
+              <a
+                href="{% url 'portfolio' %}"
+                class="nav-link {% if request.path == portfolio_url %}active"aria-current="page{% endif %}">Portfolio</a
+              >
             </li>
-            <li class="nav-item">
+            <li class="nav-item main-nav-item">
               <a href="#" class="nav-link">About</a>
             </li>
           </ul>
@@ -108,20 +118,23 @@
               href="https://www.linkedin.com/"
               target="_blank"
               aria-label="Visit our LinkedIn social media page (opens in a new tab)"
-              ><i class="fa-brands fa-linkedin social-link"></i
-            ></a>
+            >
+              <i class="fa-brands fa-linkedin social-link"></i>
+            </a>
             <a
               href="https://bsky.app/"
               target="_blank"
               aria-label="Visit our BlueSky social media page (opens in a new tab)"
-              ><i class="fa-brands fa-square-bluesky social-link"></i
-            ></a>
+            >
+              <i class="fa-brands fa-square-bluesky social-link"></i>
+            </a>
             <a
               href="https://www.facebook.com/"
               target="_blank"
               aria-label="Visit our Facebook social media page (opens in a new tab)"
-              ><i class="fa-brands fa-square-facebook social-link"></i
-            ></a>
+            >
+              <i class="fa-brands fa-square-facebook social-link"></i>
+            </a>
           </div>
         </div>
       </div>

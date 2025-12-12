@@ -8,6 +8,7 @@
     --colour-second: #0A70DC;
     --colour-second-highlight: #0857ab;
     --colour-third: #EFF7FF;
+    --colour-third-highlight: #C2E0FF;
 }
 
 /* Global styles */
@@ -27,6 +28,10 @@ h3 {
 
 #main-nav {
     background-color: var(--colour-third);
+}
+
+.main-nav-item:hover {
+    background-color: var(--colour-third-highlight);
 }
 
 .btn.qs-btn {
