@@ -13,9 +13,9 @@ class Portfolio(models.Model):
     content = models.TextField(blank=True)
     updated = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.title
-
     class Meta:
         ordering = ["-updated"]
         verbose_name_plural = "Portfolio"
+
+    def __str__(self):
+        return self.title

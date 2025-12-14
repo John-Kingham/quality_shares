@@ -3,18 +3,40 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 
+class Category(models.Model):
+    """A category of blog posts."""
+
+    name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ["name"]
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     """
     A blog post.
 
     Related:
         :model:`auth.User`.
+        :model:`post.Category`.
     """
 
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     published = models.BooleanField(default=False)
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        related_name="blog_posts",
+        blank=True,
+        null=True,
+    )
     title = models.CharField(max_length=200, unique=True)
     description = models.TextField(blank=True)
     content = models.TextField(blank=True)
