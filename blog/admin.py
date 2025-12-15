@@ -14,10 +14,8 @@ class CommentAdmin(admin.ModelAdmin):
     list_filter = ("author", "approved")
 
     def summary(self, comment):
-        max_length = 50
-        content_summary = comment.content[:max_length]
-        suffix = "..." if len(content_summary) == max_length else ""
-        return content_summary + suffix
+        """Returns summarised content that fits on the admin screen."""
+        return comment.content[:50]
 
 
 @admin.register(Post)
