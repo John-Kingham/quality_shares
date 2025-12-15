@@ -38,7 +38,7 @@ class Post(models.Model):
         null=True,
     )
     title = models.CharField(max_length=200, unique=True)
-    description = models.TextField(blank=True)
+    description = models.CharField(max_length=150, blank=True)
     content = models.TextField(blank=True)
     slug = models.SlugField(max_length=200, unique=True)
     image = CloudinaryField("image", default="placeholder")
