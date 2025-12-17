@@ -24,3 +24,6 @@ urlpatterns = [
     path("summernote/", include("django_summernote.urls")),
     path("", include("blog.urls")),
 ]
+
+handler404 = "quality_shares.views.handler404"
+handler500 = "quality_shares.views.handler500"
