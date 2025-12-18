@@ -26,7 +26,7 @@
       <!-- Comment form -->
       <div class="card-body">
         {% if user.is_authenticated %}
-        <h4>Leave a comment</h4>
+        <h4>Leave a comment as "{{ user }}"</h4>
         <form id="commentForm" method="POST" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}

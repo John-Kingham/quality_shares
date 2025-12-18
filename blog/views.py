@@ -1,3 +1,5 @@
+from http import HTTPMethod
+from django.contrib import messages
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 from .forms import CommentForm
@@ -68,15 +70,19 @@ class PostListView(ListView):
 
 def post_detail(request, slug):
     """
-    Return the post details page for a post.
+    Return the post details page for a post and save any new comments.
+
+    If the request method is POST then the user has submitted a new comment.
+    Save the comment before returning the post details page.
 
     Args:
         request (HttpRequest):
-            A GET request.
-        slug (str): The ID of a :model:`blog.Post`.
+            A GET or POST request. If POST, it contains data for a new comment.
+        slug (str): The blog post slug.
 
     Models:
         :model:`blog.Post`
+        :model:`blog.Comment`
 
     Template:
         :template:`blog/post_detail.html`
@@ -84,12 +90,15 @@ def post_detail(request, slug):
     Context:
         post (:model:`blog.Post`): The blog post.
         comments (:model:`blog.Comment`): The blog post's comments.
+        comment_form: A Crispy Form for the Comment model.
 
     Returns:
         HttpResponse: Contains the blog details page.
     """
     published_posts = Post.objects.filter(published=True)
     post = get_object_or_404(published_posts, slug=slug)
+    if request.method == HTTPMethod.POST:
+        _save_comment(request, post)
     comment_form = CommentForm()
     context = {
         "post": post,
@@ -97,3 +106,33 @@ def post_detail(request, slug):
         "comment_form": comment_form,
     }
     return render(request, "blog/post_detail.html", context)
+
+
+def _save_comment(request, post):
+    """
+    Save a new comment.
+
+    Args:
+        request (HttpRequest):
+            A POST request. Contains data for the new comment.
+        post (:model:`blog.Post`): The new comment's related blog post.
+
+    Models:
+        :model:`blog.Comment`
+        :model:`blog.Post`
+
+    Messages:
+        SUCCESS: If the new comment is saved.
+        ERROR: If there is an error and the comment isn't saved.
+    """
+    comment_form = CommentForm(data=request.POST)
+    if comment_form.is_valid():
+        comment = comment_form.save(commit=False)
+        comment.author = request.user
+        comment.post = post
+        comment.save()
+        message = "Your comment is awaiting approval."
+        messages.add_message(request, messages.SUCCESS, message)
+    else:
+        message = "Error: Your comment was invalid."
+        messages.add_message(request, messages.ERROR, message)
