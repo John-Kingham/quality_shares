@@ -11,11 +11,11 @@ class CategoryListView(ListView):
     Render the category list page.
 
     Models:
-        :model:`blog.Category`
-        :model:`blog.Post`
+        Category
+        Post
 
     Template:
-        :template:`blog/category_list.html`
+        blog/category_list.html
 
     Context:
         "categories" (QuerySet): All categories
@@ -54,13 +54,13 @@ class PostListView(ListView):
     Render the post list page.
 
     Models:
-        :model:`blog.Post`
+        Post
 
     Template:
-        :template:`blog/post_list.html`
+        blog/post_list.html
 
     Context:
-        posts (QuerySet): All published posts.
+        "posts" (QuerySet): All published posts.
     """
 
     model = Post
@@ -77,20 +77,21 @@ def post_detail(request, slug):
 
     Args:
         request (HttpRequest):
-            A GET or POST request. If POST, it contains data for a new comment.
+            A GET or POST request. If it's a POST request, it contains data
+            for a new comment.
         slug (str): The blog post slug.
 
     Models:
-        :model:`blog.Post`
-        :model:`blog.Comment`
+        Post
+        Comment
 
     Template:
-        :template:`blog/post_detail.html`
+        blog/post_detail.html
 
     Context:
-        post (:model:`blog.Post`): The blog post.
-        comments (:model:`blog.Comment`): The blog post's comments.
-        comment_form: A Crispy Form for the Comment model.
+        post (Post): The blog post.
+        comments (Comment): The blog post's comments.
+        comment_form (CommentForm): A form for the Comment model.
 
     Returns:
         HttpResponse: Contains the blog details page.
@@ -114,12 +115,12 @@ def _save_comment(request, post):
 
     Args:
         request (HttpRequest):
-            A POST request. Contains data for the new comment.
-        post (:model:`blog.Post`): The new comment's related blog post.
+            A POST request that contains CommentForm data for the new comment.
+        post (Post): The new comment's related blog post.
 
     Models:
-        :model:`blog.Comment`
-        :model:`blog.Post`
+        Comment
+        Post
 
     Messages:
         SUCCESS: If the new comment is saved.
