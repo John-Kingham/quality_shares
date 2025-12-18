@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
+from .forms import CommentForm
 from .models import Category, Post
 
 
@@ -82,14 +83,17 @@ def post_detail(request, slug):
 
     Context:
         post (:model:`blog.Post`): The blog post.
+        comments (:model:`blog.Comment`): The blog post's comments.
 
     Returns:
         HttpResponse: Contains the blog details page.
     """
     published_posts = Post.objects.filter(published=True)
     post = get_object_or_404(published_posts, slug=slug)
+    comment_form = CommentForm()
     context = {
         "post": post,
-        "comments": post.comments.all().order_by("-created")
+        "comments": post.comments.all().order_by("-created"),
+        "comment_form": comment_form,
     }
     return render(request, "blog/post_detail.html", context)

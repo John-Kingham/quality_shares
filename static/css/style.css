@@ -36,6 +36,7 @@ h3 {
 
 .btn.qs-btn {
     background-color: var(--colour-second);
+    color: #FFF;
 }
 
 .btn.qs-btn:hover {
