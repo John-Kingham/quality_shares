@@ -6,7 +6,6 @@ class Portfolio(models.Model):
     """
     Content for the Portfolio page.
     """
-
     title = models.CharField(max_length=200, unique=True)
     image = CloudinaryField("image", default="placeholder")
     image_caption = models.CharField(max_length=100, blank=True)
