@@ -39,12 +39,13 @@
       <!-- Comments -->
       <div class="card-body">
         {% for comment in comments %}
-        <article class="p-3 rounded-3 {% if not comment.approved and user == comment.author %}bg-light{% elif not comment.approved %}d-none{% endif %} ">
+        {% if comment.approved or user == comment.author %}
+        <article class="p-3 rounded-3 {% if not comment.approved %}bg-light{% endif %} ">
           <p class="post-meta">
             {{ comment.author }} - {{ comment.created  | date:"M j, Y" }}
           </p>
           <p class="fw-bold fst-italic text-danger">
-            {% if not comment.approved and user == comment.author %}This comment is waiting to be approved.{% endif %}
+            {% if not comment.approved %}This comment is waiting to be approved.{% endif %}
           </p>
           <div id="comment{{ comment.id }}">
             {{ comment.content | linebreaks }}
@@ -53,6 +54,7 @@
           <button class="btn btn-primary qs-btn edit-btn" data-comment-id="{{ comment.id }}">Edit</button>
           {% endif %}
         </article>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
