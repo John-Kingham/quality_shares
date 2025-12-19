@@ -1,5 +1,17 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import About
 
 
-def test_view(request):
-    return HttpResponse("The About page is working.")
+def about_view(request):
+    """
+    Returns a response for the About page.
+
+    Args:
+        request (HttpRequest): A GET request.
+
+    Returns:
+        HttpResponse: Contains the About page.
+    """
+    about = About.objects.first()
+    context = {"about": about}
+    return render(request, "about/about.html", context)

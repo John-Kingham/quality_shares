@@ -1,6 +1,7 @@
 {% load static %}
 {% url "post_list" as post_list_url %}
 {% url "portfolio" as portfolio_url %}
+{% url "about"  as about_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -84,11 +85,15 @@
             <li class="nav-item main-nav-item">
               <a
                 href="{% url 'portfolio' %}"
-                class="nav-link {% if request.path == portfolio_url %}nav-active"aria-current="page{% endif %}">Portfolio</a
+                class="nav-link {% if request.path == portfolio_url %}nav-active" aria-current="page{% endif %}">Portfolio</a
               >
             </li>
             <li class="nav-item main-nav-item">
-              <a href="#" class="nav-link">About</a>
+              <a
+                href="{% url 'about' %}"
+                class="nav-link {% if request.path == about_url %}nav-active" aria-current="page{% endif %}">About</a
+              >
+            </li>
             </li>
           </ul>
         </div>

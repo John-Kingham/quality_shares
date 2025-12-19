@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- About content -->
+<section class="container p-3">
+  <article class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <h2>{{ about.title }}</h2>
+      <figure class="d-flex flex-column align-items-center">
+        <img
+          class="shadow feature-img"
+          src="{{ about.image.url }}"
+          alt="our employees"
+        />
+        <figcaption class="text-secondary">
+          {{ about.image_caption }}
+        </figcaption>
+      </figure>
+      <div class="my-3">
+        {{ about.content | safe }}
+      </div>
+    </div>
+  </article>
+</section>
+
+{% endblock content %}
