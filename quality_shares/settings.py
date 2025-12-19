@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 import sys
+from django.contrib.messages import constants as messages_constants
 import dj_database_url
 
 if os.path.isfile("env.py"):
@@ -104,6 +105,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "quality_shares.wsgi.application"
 
+# Associate message severity with the Bootstrap classes.
+MESSAGE_TAGS = {
+    messages_constants.SUCCESS: "alert-success",
+    messages_constants.ERROR: "alert-danger",
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
