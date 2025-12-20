@@ -36,42 +36,42 @@
 <!-- Blog comments section -->
 <section class="container p-3">
   <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6 card p-3">
-      <h3>Continue the discussion</h3>
-      <!-- Comment form -->
-      <div class="card-body">
-        {% if user.is_authenticated %}
-        <h4>Leave a comment as "{{ user }}"</h4>
-        <form id="commentForm" method="POST" style="margin-top: 1.3em;">
-          {{ comment_form | crispy }}
-          {% csrf_token %}
-          <button id="submitButton" type="submit" class="btn qs-btn">Submit</button>
-        </form>
-        {% else %}
-        <p class="fw-bold">Log in to leave a comment</p>
-        {% endif %}
-      </div>
-      <!-- Comments -->
-      <div class="card-body">
-        {% for comment in comments %}
-        {% if comment.approved or user == comment.author %}
-        <article class="p-3 rounded-3 {% if not comment.approved %}bg-light{% endif %} ">
-          <p class="post-meta">
-            {{ comment.author }} - {{ comment.created  | date:"M j, Y" }}
-          </p>
-          <p class="fw-bold fst-italic text-danger">
-            {% if not comment.approved %}This comment is waiting to be approved.{% endif %}
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.content | linebreaks }}
-          </div>
-          {% if user.is_authenticated and user == comment.author %}
-          <button class="btn btn-primary qs-btn edit-btn" data-comment-id="{{ comment.id }}">Edit</button>
-          <button class="btn btn-outline-primary qs-btn-outline delete-btn" data-comment-id="{{ comment.id }}">Delete</button>
+    <div class="col-md-8 col-lg-6">
+      <div class="card p-3">
+        <h3>Continue the discussion</h3>
+        <div class="card-body">
+          <!-- Comment form -->
+          {% if user.is_authenticated %}
+          <h4>Leave a comment as "{{ user }}"</h4>
+          <form id="commentForm" method="POST" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit" class="btn qs-btn">Submit</button>
+          </form>
+          {% else %}
+          <p class="fw-bold">Log in to leave a comment</p>
           {% endif %}
-        </article>
-        {% endif %}
-        {% endfor %}
+          <!-- Comments -->
+          {% for comment in comments %}
+          {% if comment.approved or user == comment.author %}
+          <article class="py-3 rounded-3 {% if not comment.approved %}bg-light{% endif %} ">
+            <p class="post-meta">
+              {{ comment.author }} - {{ comment.created  | date:"M j, Y" }}
+            </p>
+            <p class="fw-bold fst-italic text-danger">
+              {% if not comment.approved %}This comment is waiting to be approved.{% endif %}
+            </p>
+            <div id="comment{{ comment.id }}">
+              {{ comment.content | linebreaks }}
+            </div>
+            {% if user.is_authenticated and user == comment.author %}
+            <button class="btn btn-primary qs-btn edit-btn" data-comment-id="{{ comment.id }}">Edit</button>
+            <button class="btn btn-outline-primary qs-btn-outline delete-btn" data-comment-id="{{ comment.id }}">Delete</button>
+            {% endif %}
+          </article>
+          {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
