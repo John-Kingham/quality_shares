@@ -38,14 +38,12 @@
     <header>
       <!-- Site header with logo and login/out buttons -->
       <nav class="navbar navbar-expand">
-        <div class="container position-relative">
-          <a href="/" class="navbar-brand">
+        <div class="container position-relative px-3">
+          <a id="header-logo" href="/" class="navbar-brand d-md-inline">
             <img src="{% static 'images/logo-50x50.png' %}" alt="logo">
           </a>
-          <a href="/">
-            <h1 id="header-title" class="position-absolute top-50 start-50 translate-middle d-md-inline">
-              Quality Shares
-            </h1>
+          <a href="/" class="text-decoration-none">
+            <h1 id="header-title" class="m-0">Quality Shares</h1>
           </a>
           <ul class="navbar-nav">
             {% if user.is_authenticated %}
