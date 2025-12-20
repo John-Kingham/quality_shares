@@ -22,11 +22,9 @@
         <h2>Premium content</h2>
         <div class="card-body">
           <p>The rest of this article is available to logged-in subscribers only.</p>
-          <p>To view this content, please sign-up or log-in.</p>
-          <div class="flex">
-            <a class="btn btn-primary me-1 qs-btn" href="{{ signup_url }}">Sign up</a>
-            <a class="btn btn-outline-primary qs-btn-outline" href="{{ login_url }}">Log in</a>
-          </div>
+          <p>To view this content, please sign up or log in.</p>
+          <a class="btn btn-primary me-1 qs-btn" href="{{ signup_url }}">Sign up</a>
+          <a class="btn btn-outline-primary qs-btn-outline" href="{{ login_url }}">Log in</a>
         </div>
       </div>
       {% endif %}
@@ -49,7 +47,9 @@
             <button id="submitButton" type="submit" class="btn qs-btn">Submit</button>
           </form>
           {% else %}
-          <p class="fw-bold">Log in to leave a comment</p>
+          <p class="fw-bold">Sign up or log in to leave a comment.</p>
+          <a class="btn btn-primary me-1 qs-btn" href="{{ signup_url }}">Sign up</a>
+          <a class="btn btn-outline-primary qs-btn-outline" href="{{ login_url }}">Log in</a>
           {% endif %}
           <!-- Comments -->
           {% for comment in comments %}
