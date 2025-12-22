@@ -302,7 +302,24 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 - Images of these various features are available in the TESTING document.
 - This section is useful to users as it enables them to converse directly with the site's authors and with other users.
 
-#### Sign up / Log in / Log out
+#### Sign up
+
+[IMAGE OF THE SIGN-UP SECTION]
+
+- This section enables users to sign up to view premium content and post comments. Users can reach this section by clicking on any of the site's Sign-up buttons.
+- This section contains a heading (using the site-wide standard heading colour and font) and a sign-up form and button.
+- The form has fields for username, email (optional) and password.
+- There are mininum standards for the password which are enforced through validation.
+- The form's sign-up button uses the site's secondary blue colour as its background, with text in white (the same as the Sign-up button across the rest of the site).
+- This section is useful to users because it enables them to log-in and view premium content and engage in conversations with admins or other users by posting comments.
+
+#### Log in
+
+
+
+#### Log out
+
+
 
 #### Portfolio Information
 
