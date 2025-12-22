@@ -221,16 +221,27 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 #### Header Navigation
 
 [IMAGE OF HEADER NAV]
+
 - Each page contains a header navigation section.
 - This section contains the site's logo and title in the primary dark blue colour. The site title has a large font size and uses the site's custom headings font.
 - This section also contains sign-up and log-in buttons. The sign-up button is solid and uses the secondary blue as its background colour and white as a high-contrast text colour. The button's colour changes on hover to provide visual feedback. The log-in button has a white background and uses the secondary blue colour for text. On hover, this button's background switches to the tertiary blue colour to give the user visual feedback. Identical sign-up and log-in buttons are used across the site.
 - When the user is logged in, the sign-up and log-in buttons are replaced by a log-out button, which uses the same styling as the log-in button.
-- The header navigation section also displays messages to users, providing additional feedback for certain activities. These include logging in and logging out, as well as creating, deleting and updating comments.
+- This section also displays messages to users, providing additional feedback for certain activities. These include logging in and logging out, as well as creating, deleting and updating comments.
 - This section is useful to users for many reasons. It provides a consistent look-and-feel at the start of each page, it enables users to easily navigate around the site, it enables users to log in and out, and it gives helpful feedback in the form of pop-up messages.
 
 #### Posts by Category
 
-#### Footer Contact Details
+[IMAGE OF POSTS BY CATEGORY SECTION]
+
+- The homepage contains a list of blog posts organised by category (e.g. Market Valuations, Company Reviews, Investment Strategy, etc). 
+- The category name and post titles are in the primary dark blue colour and use the site's custom headings font.
+- The background is plain white, so as not to distract from the content, which is the most important part of the site.
+- Each blog post's feature image, title and date are shown within a bordered "card" with rounded corners. The border is in a generic light grey colour which is not explicitly part of the site's colour palette. Each post's title links to the post's detail page. This design cleanly separates one post from another, while providing a minimalist, modern look and feel.
+- This section is useful to users because it shows them the various content topics available on the site, and it helps them quickly find blog posts about a specific topic.
+
+#### Contact Details
+
+
 
 #### List of Posts (Post Archive)
 
