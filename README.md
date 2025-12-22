@@ -354,11 +354,19 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 
 ### Future Features
 
-#### Email Newsletter
+Some of the could-have user stories didn't make it into the deployed site before the project's deadline. This is normal with timeboxed agile projects. These stories remain in the GitHub project's product backlog milestone, and may be implemented in future iterations depending on what Jim decides to do.
 
-#### Contact Form
+#### Manage Email Newsletters / Get Posts by Email
 
-#### View Posts for a Category
+This is user story #8 and #16, part of the User Sign-up epic. The idea was that users could subscribe to a free email newsletter and receive the latest posts by email. This would likely require connecting the site to an external bulk email platform, which could make this a relatively large feature, but still technically feasible.
+
+#### Contact the Company through the Website / Manage User Enquiries
+
+This is user story #14 and #18. This is effectively a contact form that users can use to send private messages to the site's admin, who can then respond by email, as appropriate. This is technically simple and could easily be implemented in a future release.
+
+#### View all Posts for a Single Category
+
+This is user story #20. The plan was for users to be able to view all posts for one category by clicking on the category of a single post, or via links on the homepage or a category dropdown selector on the Post Archive page. This should be technically simple and could easily be implemented in a future release.
 
 ## Project Management
 
