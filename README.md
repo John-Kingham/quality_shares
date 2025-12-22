@@ -334,7 +334,23 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 
 #### Portfolio Information
 
+[IMAGE OF PORTFOLIO SECTION]
+
+- This section contains information about Jim's model investment portfolio.
+- It includes a title (using the site-wide standard heading colour and font), a feature image (and caption) and relevant written content.
+- The image shrinks to fit within the width of the written content, and never grows beyond its original size.
+- The section's content uses the site's standard custom body font for body text and custom heading font and primary dark blue colour for headings.
+- This section is useful to users as they can read about Jim's portfolio to see if they like his approach to investing and his past performance.
+
 #### About Information
+
+[IMAGE OF ABOUT SECTION]
+
+- This section contains information about Jim.
+- It includes a title (using the site-wide standard heading colour and font), a feature image (and caption) and relevant written content.
+- The image shrinks to fit within the width of the written content, and never grows beyond its original size.
+- The section's content uses the site's standard custom body font for body text and custom heading font and primary dark blue colour for headings.
+- This section is useful to users as they can learn more about the person (or people) behind the site, which may help them develop an opinion about whether the site's content is worth reading or not (and perhaps whether future products are worth purchasing).
 
 ### Future Features
 
