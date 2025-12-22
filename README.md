@@ -276,7 +276,19 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 
 #### Blog Post Premium Content
 
+[IMAGE OF PREMIUM CONTENT SIGN-UP MESSAGE]
+
+- Users must sign up or log in to read premium content.
+- If a post contains premium content and the user isn't logged in, they are shown a panel asking them to sign up or log in.
+- This panel contains a heading, body content and sign-up and log-in buttons.
+- The heading, body content and buttons use the same fonts and colours used across the rest of the site. The sign-up and log-in buttons send the user to the relevant sign-up or log-in page.
+- The panel has a generic light grey background, which isn't explicitly part of the site's colour palette. The panel also has a generic darker grey border with rounded edges, and this colour also isn't an explicit part of the colour palette.
+- When users log in and revisit this page, this panel is replaced with the post's premium content, which is styled identically to the post's free content.
+- This section is useful to users because it allows them to see premium content which is not available to logged-out users.
+
 #### Blog Post Comments
+
+
 
 #### Sign up / Log in / Log out
 
