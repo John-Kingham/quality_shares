@@ -250,10 +250,21 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 - The footer contains a header, in the site's customer header font and in the site's primary dark blue colour.
 - The footer's body text uses the site's custom body font and is in standard black.
 - The social media icons are in the secondary medium blue colour and use the "highlight" version of the secondary colour on hover, to provide visual feedback. Each icon links to its respective social media platform.
+- This section is useful to users because it enables them to contact the company and to ask questions in various ways.
 
 #### List of Posts (Post Archive)
 
+[IMAGE OF POST ARCHIVE SECTION]
+
+- The Archive page contains a page heading and a list of all blog posts, sorted by creation date in descending order (newest to oldest).
+- As with other sections, this section's headings and post titles use the site's custom heading font and the primary dark blue colour. 
+- Posts are shown in a similar "card" format to the Post by Category (homepage) section. The main difference is that on wide screens, cards in this section are shown in a single column with each card having a horizontal internal layout, whereas in the Posts by Category section the cards have a vertical internal layout and are stacked side-by-side, two-by-two.
+- This section lacks pagination, but the site currently has relatively little content so this isn't a major issue, and pagination can easily be added in a future release.
+- This section is useful to users as it allows them to quickly scan through all posts on the site, especially the most recent posts as these are listed first.
+
 #### Blog Post Content
+
+
 
 #### Blog Post Premium Content
 
