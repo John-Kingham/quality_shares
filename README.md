@@ -307,19 +307,30 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 [IMAGE OF THE SIGN-UP SECTION]
 
 - This section enables users to sign up to view premium content and post comments. Users can reach this section by clicking on any of the site's Sign-up buttons.
-- This section contains a heading (using the site-wide standard heading colour and font) and a sign-up form and button.
+- This section contains a heading (which uses the site-wide standard heading colour and font) and a sign-up form and button.
 - The form has fields for username, email (optional) and password.
 - There are mininum standards for the password which are enforced through validation.
-- The form's sign-up button uses the site's secondary blue colour as its background, with text in white (the same as the Sign-up button across the rest of the site).
-- This section is useful to users because it enables them to log-in and view premium content and engage in conversations with admins or other users by posting comments.
+- The form's sign-up button uses the site's secondary blue colour as its background, with text in white. The background switches to the darker "highlight" variant colour on hover, to provide visual feedback.
+- This section is useful to users because it enables them to sign-up to view premium content and engage in conversations with admins or other users by posting comments.
 
 #### Log in
 
+[IMAGE OF THE LOG-IN SECTION]
 
+- This section is where signed-up users can log-in to view premium content and post comments. Users can reach this section by clicking on any of the site's Log-in buttons.
+- This section contains a heading (which uses the site-wide standard heading colour and font) and a log-in form and button.
+- The form has fields for username and password.
+- The form's log-in button uses the site's secondary blue colour as its background, with text in white. The background switches to the darker "highlight" variant colour on hover, to provide visual feedback.
+- This section is useful to users because it enables them to log-in and view premium content and engage in conversations with admins or other users by posting comments.
 
 #### Log out
 
+[IMAGE OF THE LOG-OUT SECTION]
 
+- This section is where logged-in users can log out.
+- This section contains a heading (which uses the site-wide standard heading colour and font), some body text and a log-out button.
+- The log-out button uses the site's secondary blue colour as its background, with text in white. The background switches to the darker "highlight" variant colour on hover, to provide visual feedback.
+- This section is useful to logged-in users because it enables them to log-out, which helps to keep their user profile secure.
 
 #### Portfolio Information
 
