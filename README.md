@@ -288,7 +288,19 @@ In the Skeleton Plane, I added fields to the data model tables that were most li
 
 #### Blog Post Comments
 
+[IMAGE OF COMMENT PANEL]
 
+- Users must sign up or log in to submit comments.
+- This section contains a request for users to sign up or log in, and a list of comments. Exactly what the user sees will depend upon their logged-in/out status and the approval status of each comment.
+- If the user is logged out, they will see a message asking them to sign up or log in, along with the relevant sign-up and log-in buttons. These buttons are styled in the same way as they are across the rest of the site.
+- If the user is logged out, they will also see a list of approved comments. Each comment shows the authors username and the comment's creation date, in the site's custom body font and in the darker "highlight" version of the secondary blue colour.
+- If the user is logged in, they won't see the section asking them to sign up or log in. And in addition to approved comments, they'll also see any unapproved comments where they are the author.
+- Unapproved comments are distinguished by a generic light-grey background and a reminder (in bold red italics) that the comment is awaiting approval.
+- If the user is logged in, they will see Edit and Delete buttons below each of their own comments. The Edit button is styled the same as the Sign up button, and the Delete button is styled the same as the Log in button.
+- If the user clicks the Edit button, the comment's text is automatically copied into the comment form's text area, ready for updating.
+- If the user clicks the Delete button, they're shown a confirmation modal, where they can confirm or cancel their deletion request.
+- Images of these various features are available in the TESTING document.
+- This section is useful to users as it enables them to converse directly with the site's authors and with other users.
 
 #### Sign up / Log in / Log out
 
