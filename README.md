@@ -359,6 +359,10 @@ Note that the fields use generic data types like "string" and "date", as this di
 - The section's content uses the site's standard custom body font for body text and custom heading font and primary dark blue colour for headings.
 - This section is useful to users as they can learn more about the person (or people) behind the site, which may help them develop an opinion about whether the site's content is worth reading or not (and perhaps whether future products are worth purchasing).
 
+#### Error Pages
+
+[TO DO]
+
 ### Future Features
 
 Some of the could-have user stories didn't make it into the deployed site before the project's deadline. This is normal with timeboxed agile projects. These stories remain in the GitHub project's product backlog milestone, and may be implemented in future iterations depending on what Jim decides to do.
