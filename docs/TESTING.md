@@ -73,7 +73,8 @@ Tests for editing and deleting comments would have been ideal, but these were no
 |Hide unapproved comments|When the user is logged out, unapproved comments are not visible|As a logged out user, viewed the comments section of a post with unapproved comments|As expected|![Hidden unapproved comment](/docs/images/testing/comments-hidden-unapproved.png)|
 |Show approved comments|When the user is logged out, approved comments are visible|As a logged out user, viewed the comments section of a post with approved comments|As expected|![Visible approved comments](/docs/images/testing/comments-visible-approved.png)|
 |Comment form|When the user is logged in, the sign-up/log-in request is replaced with a comment form|Viewed the comments section as a logged-in user|As expected|![Comments form](/docs/images/testing/comments-form.png)|
-|Create comment|When the user submits the comment form, an unapproved comment is created and shown below the form|Submitted the comment form with a new comment|As expected|*Before submitting* ![New comment - before](/docs/images/testing/comments-create-before.png) *After submitting* ![New comment - after](/docs/images/testing/comments-create-after.png)|
+|Empty comment validation|If the user submits an empty comment form, a validation message is shown and the form does not submit|Tried to submit an empty comment form|As expected|![Empty comment form validation](/docs/images/testing/comments-empty-form-validation.png)|
+|Create comment|When the user submits the comment form with content, an unapproved comment is created and shown below the form|Submitted the comment form with a new comment|As expected|*Before submitting* ![New comment - before](/docs/images/testing/comments-create-before.png) *After submitting* ![New comment - after](/docs/images/testing/comments-create-after.png)|
 |Create comment message|When the user submits the comment form, an "awaiting approval" message is shown|Submitted the comment form|As expected|![Awaiting approval message](/docs/images/testing/comments-create-message.png)|
 |Unapproved comments|When the user is logged in, they can see their unapproved comments with Edit and Delete buttons|Viewed unapproved comments as the logged-in comment author|As expected|![Visible unapproved comment](/docs/images/testing/comments-visible-unapproved.png)|
 |Editable comments|When the user is logged in, all of their comments have Edit and Delete buttons|Viewed comments as the logged-in comment author|As expected|![Editable comment](/docs/images/testing/comments-editable.png)|
@@ -86,15 +87,23 @@ Tests for editing and deleting comments would have been ideal, but these were no
 
 ### Post List Section
 
+|Feature|Expect|Action|Result|Image|
+|---|---|---|---|---|
+|Post title link|When clicked, the user is taken to the Post Detail page for that post|Clicked several links|As expected|None|
+
 ### Portfolio and About Sections
 
-There are no links within the Portfolio and About sections, other than those embedded within admin-created content. Content formatting and functionality is dealt with in a separate section of this document.
+There are no links within the Portfolio and About sections, other than those embedded within admin-created content.
 
 ### Sign-up, Log-in and Log-out Sections
 
 |Feature|Expect|Action|Result|Image|
 |---|---|---|---|---|
-|Logged-in message|After logging in, a relevant message is shown|Logged in|As expected|![Header log-in message](/docs/images/testing/header-logged-in.png)|
+|Sign-up validation|When the sign-up form is submitted with missing required fields, validation messages are shown and the form is not submitted|Tried submitting the sign-up form with various required fields missing|As expected|![Sign-up validation](/docs/images/testing/sign-up-validation.png)|
+|Sign-up message|After submitting the sign-up form, a new user profile is created, the user is logged in and a confirmation message is shown|Signed up as a new user|As expected|![Sign up message](/docs/images/testing/sign-up-message.png)|
+|Log-in validation|When the log-in form is submitted with missing required fields, validation messages are shown and the form is not submitted|Tried submitting the log-in form with various required fields missing|As expected|![Log-in validation](/docs/images/testing/log-in-validation.png)|
+|Logged-in message|After submitting the log-in form, the user is logged in and a confirmation message is shown|Logged in|As expected|![Log-in message](/docs/images/testing/log-in-message.png)|
+|Log-out|When a logged-in user clicks the log-out button, the user is logged out and a confirmation message is shown|Clicked the log-out button as a logged-in user|As expected|![Log-out message](/docs/images/testing/log-out-message.png)|
 
 ### 404 Error Page Section
 
