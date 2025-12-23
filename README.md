@@ -1,6 +1,7 @@
 # Quality Shares
 
-- [Live website on Heroku](https://quality-shares-3f67cc1f7e60.herokuapp.com/) 
+- [Live website](https://quality-shares-3f67cc1f7e60.herokuapp.com/)
+- [Live admin login](https://quality-shares-3f67cc1f7e60.herokuapp.com/admin)
 
 Quality Shares is an informative and educational website for "quality investors"; in other words, investors seeking high-quality income and growth stocks.
 
@@ -178,11 +179,17 @@ All model-based content (e.g. blog posts, portfolio page content, etc.) was gene
 
 ## Data Model
 
-During the Structure Plane, I created a structural entitiy relationship diagram, showing potential database tables and their relationships:
+### High-Level Entity Relationship Diagram
+
+During the Structure Plane, I created a structural entitiy relationship diagram, showing potential database tables and their relationships without the detail of individual fields:
 
 ![ERD structural diagram](/docs/images/erd/erd-structure.png)
 
-In the Skeleton Plane, I added fields to the data model tables that were most likely to be implemented. I also simplified the data model that related to premium blog content, by removing the SubscriptionTier table and replacing it with a Premium Content field in the Post table.
+### Detailed Entity Relationship Diagram
+
+In the Skeleton Plane, I added detail by adding fields to the data model tables that were most likely to be implemented. I also simplified the parts of the model that related to premium blog content, by removing the SubscriptionTier table and replacing it with a Premium Content field in the Post table.
+
+Note that the fields use generic data types like "string" and "date", as this diagram is still abstract and not implementation specific (i.e. not trying to represent any specific database type or ORM system).
 
 ![ERD detail diagram](/docs/images/erd/erd-skeleton.png)
 
@@ -449,6 +456,8 @@ By the project deadline, there were several could-have user stories still in the
 - #20 View all posts for a single category (could-have)
 
 ## Testing
+
+The website was thoroughly tests, with all tests documented in [TESTING.md](/docs/TESTING.md).
 
 ## Deployment
 
