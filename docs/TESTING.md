@@ -105,9 +105,12 @@ There are no links within the Portfolio and About sections, other than those emb
 |Logged-in message|After submitting the log-in form, the user is logged in and a confirmation message is shown|Logged in|As expected|![Log-in message](/docs/images/testing/log-in-message.png)|
 |Log-out|When a logged-in user clicks the log-out button, the user is logged out and a confirmation message is shown|Clicked the log-out button as a logged-in user|As expected|![Log-out message](/docs/images/testing/log-out-message.png)|
 
-### 404 Error Page Section
+### 404 and 500 Error Sections
 
-### 500 Error Page Section
+|Feature|Expect|Action|Result|Image|
+|---|---|---|---|---|
+|404 error page|When an invalid path is entered, a helpful error page is shown|Entered an invalid path|As expected|![404 error page](/docs/images/testing/404-error-page.png)|
+|404 homepage button|When the "homepage" button is clicked, the user is sent to the homepage|Clicked the "homepage" button|As expected|None|
 
 ## Admin Site Functionality
 
