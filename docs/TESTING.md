@@ -221,7 +221,7 @@ This combination is used for unapproved comments. It only passes the AA Large te
 |Portfolio|Yes|Yes|Yes|
 |About|Yes|Yes|Yes|
 
-### Screenshots
+### Responsiveness Screenshots
 
 <details>
 <summary>Home - Mobile</summary>
@@ -348,7 +348,7 @@ The site's functionality and responsiveness were tested on Chrome, Edge and Fire
 |Portfolio as expected?|Yes|Yes|Yes|
 |About as expected?|Yes|Yes|Yes|
 
-### Screenshots
+### Browser Screenshots
 
 All of the screenshots in the sections above were taken on Chrome. Rather than include every screenshot for every browser, here are a few screenshots from Edge and Firefox showing similar results to Chrome:
 
@@ -373,6 +373,29 @@ All of the screenshots in the sections above were taken on Chrome. Rather than i
 ## Code Validation
 
 ### HTML Validation
+
+HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/).
+
+#### Home Validation
+
+![Homepage HTML validation results](./images/testing/validation/home-html-validation.png)
+
+There were four errors relating to unnecessary ARIA roles. I fixed these warnings by removing the offending roles.
+
+There was one error relating to an unnecessary closing `li` tag. I fixed this error by removing the offending tag.
+
+I re-validated the page and there were no errors or warnings.
+
+
+
+#### Post Detail Validation
+
+#### Archive Validation
+
+#### Portfolio Validation
+
+#### About Validation
+
 
 ### CSS Validation
 
