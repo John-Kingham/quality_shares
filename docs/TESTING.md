@@ -398,9 +398,17 @@ There was one warning about an article without a heading. This was a comment. To
 
 There was one error about the use of aria-labelledby on a plain div. I fixed this by giving the div a role of `dialog`.
 
+I re-validated the page and there were no errors or warnings.
 
+![Post Detail HTML validation fixed](./images/testing/validation/post-detail-html-validation-fixed.png)
 
 #### Archive HTML Validation
+
+![Archive HTML validation errors](./images/testing/validation/archive-html-validation-errors.png)
+
+There were two errors relating to an unclosed section element.
+
+
 
 #### Portfolio HTML Validation
 
