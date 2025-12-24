@@ -9,6 +9,7 @@
   --colour-second-highlight: #0857ab;
   --colour-third: #eff7ff;
   --colour-third-highlight: #c2e0ff;
+  --bold: 700;
 }
 
 /* Global styles */
@@ -94,7 +95,14 @@ h3 {
 
 .post-meta {
   color: var(--colour-second-highlight);
-  font-weight: 700;
+  font-weight: var(--bold);
+}
+
+.comment-heading {
+  color: var(--colour-second-highlight);
+  font-family: var(--font-body);
+  font-weight: var(--bold);
+  font-size: 1rem;
 }
 
 .post-thumb {

@@ -376,7 +376,7 @@ All of the screenshots in the sections above were taken on Chrome. Rather than i
 
 HTML was validated using the [W3C Markup Validation Service](https://validator.w3.org/).
 
-#### Home Validation
+#### Home HTML Validation
 
 ![Homepage HTML validation results](./images/testing/validation/home-html-validation.png)
 
@@ -386,16 +386,25 @@ There was one error relating to an unnecessary closing `li` tag. I fixed this er
 
 I re-validated the page and there were no errors or warnings.
 
+![Homepage HTML validation fixed results](./images/testing/validation/home-html-validation-fixed.png)
+
+#### Post Detail HTML Validation
+
+![Post Detail HTML validation errors](./images/testing/validation/post-detail-html-validation-errors.png)
+
+There was one warning about a section without a heading. To fix this, I changed the section to a div.
+
+There was one warning about an article without a heading. This was a comment. To fix this, I changed the comment meta-info into a heading.
+
+There was one error about the use of aria-labelledby on a plain div. I fixed this by giving the div a role of `dialog`.
 
 
-#### Post Detail Validation
 
-#### Archive Validation
+#### Archive HTML Validation
 
-#### Portfolio Validation
+#### Portfolio HTML Validation
 
-#### About Validation
-
+#### About HTML Validation
 
 ### CSS Validation
 

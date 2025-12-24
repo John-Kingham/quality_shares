@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
-
-<!-- Blog post detail -->
 {% block content %}
-<section class="container p-3">
+<!-- Blog post detail -->
+<div class="container p-3">
   <article class="row justify-content-center">
     <div class="col-md-10 col-lg-8">
       <h2>{{ post.title }}</h2>
@@ -31,7 +30,7 @@
       {% endif %}
     </div>
   </article>
-</section>
+</div>
 <!-- Blog comments section -->
 <section class="container p-3">
   <div class="row justify-content-center">
@@ -56,7 +55,7 @@
           {% for comment in comments %}
           {% if comment.approved or user == comment.author %}
           <article class="my-3 py-3 rounded-3 {% if not comment.approved %}px-3 bg-light{% endif %} ">
-            <p class="post-meta">{{ comment.author }} - {{ comment.created  | date:"M j, Y" }}</p>
+            <h3 class="comment-heading">{{ comment.author }} - {{ comment.created  | date:"M j, Y" }}</h3>
             {% if not comment.approved %}
             <p class="fw-bold fst-italic text-danger">This comment is waiting to be approved.</p>
             {% endif %}
@@ -75,7 +74,7 @@
 </section>
 
 <!-- Modal: Confirm comment delete -->
-<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="delete-modal-label" aria-hidden="true">
+<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="delete-modal-label" aria-hidden="true" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
