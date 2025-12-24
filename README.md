@@ -130,7 +130,7 @@ Some of the could-have stories didn't make it into the deployed website. This is
 
 The structure plane is where we begin to design a solution to the previously gathered requirements, and my initial design for the site had the following high-level structural UI elements:
 
-![Website structure diagram](/docs/images/wireframes/page-structure.png)
+![Website structure diagram](./docs/images/wireframes/page-structure.png)
 
 Note that some of these structural elements did not make it into the deployed website. This was due to a mixture of time constraints, user feedback and (hopefully) better designs as the project progressed and more information became available.
 
@@ -142,15 +142,15 @@ I used wireframes to add detail to the webpage structures outlined above. These 
 
 #### Mobile Wireframes
 
-![Wireframes for mobile](docs/images/wireframes/wireframes-mobile.png)
+![Wireframes for mobile](./docs/images/wireframes/wireframes-mobile.png)
 
 #### Tablet Wireframes
 
-![Wireframes for tablet](docs/images/wireframes/wireframes-tablet.png)
+![Wireframes for tablet](./docs/images/wireframes/wireframes-tablet.png)
 
 #### Desktop Wireframes
 
-![Wireframes for desktop](docs/images/wireframes/wireframes-desktop.png)
+![Wireframes for desktop](./docs/images/wireframes/wireframes-desktop.png)
 
 ### Surface Plane
 
@@ -183,7 +183,7 @@ All model-based content (e.g. blog posts, portfolio page content, etc.) was gene
 
 During the Structure Plane, I created a structural entitiy relationship diagram, showing potential database tables and their relationships without the detail of individual fields:
 
-![ERD structural diagram](/docs/images/erd/erd-structure.png)
+![ERD structural diagram](./docs/images/erd/erd-structure.png)
 
 ### Detailed Entity Relationship Diagram
 
@@ -193,7 +193,7 @@ The fields use generic data types like string and date, as this diagram is still
 
 In the diagram, the Post table has category as a simple string type, but at the implementation stage I changed the design to have a separate Category table, with name and description fields and a one-to-many relationship from Category to Post.
 
-![ERD detail diagram](/docs/images/erd/erd-skeleton.png)
+![ERD detail diagram](./docs/images/erd/erd-skeleton.png)
 
 ## Technologies Used
 
@@ -464,7 +464,7 @@ By the project deadline, there were several could-have user stories still in the
 
 ## Testing
 
-The website was thoroughly tests, with all tests documented in [TESTING.md](/docs/TESTING.md).
+The website was thoroughly tests, with all tests documented in [TESTING.md](./docs/TESTING.md).
 
 ## Deployment
 
