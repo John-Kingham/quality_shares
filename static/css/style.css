@@ -30,7 +30,11 @@ h3 {
   background-color: var(--colour-third);
 }
 
-.main-nav-item:hover {
+#main-nav a {
+  color: var(--colour-first);
+}
+
+#main-nav li:hover {
   background-color: var(--colour-third-highlight);
 }
 
@@ -105,6 +109,7 @@ h3 {
 /* Footer section */
 
 #base-footer {
+  color: var(--colour-first);
   background-color: var(--colour-third);
 }
 

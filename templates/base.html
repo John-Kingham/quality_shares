@@ -74,25 +74,25 @@
       <nav id="main-nav" class="navbar navbar-expand" role="navigation">
         <div class="container justify-content-center">
           <ul class="navbar-nav">
-            <li class="nav-item main-nav-item">
+            <li class="nav-item">
               <a
                 href="/"
                 class="nav-link {% if request.path == "/" %}nav-active" aria-current="page{% endif %}">Home</a
               >
             </li>
-            <li class="nav-item main-nav-item">
+            <li class="nav-item">
               <a
                 href="{% url 'post_list' %}"
                 class="nav-link {% if request.path == post_list_url %}nav-active" aria-current="page{% endif %}">Archive</a
               >
             </li>
-            <li class="nav-item main-nav-item">
+            <li class="nav-item">
               <a
                 href="{% url 'portfolio' %}"
                 class="nav-link {% if request.path == portfolio_url %}nav-active" aria-current="page{% endif %}">Portfolio</a
               >
             </li>
-            <li class="nav-item main-nav-item">
+            <li class="nav-item">
               <a
                 href="{% url 'about' %}"
                 class="nav-link {% if request.path == about_url %}nav-active" aria-current="page{% endif %}">About</a

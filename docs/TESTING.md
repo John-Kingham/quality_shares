@@ -161,3 +161,70 @@ The admin site is a built-in part of Django, so I didn't test it as thoroughly a
 |Category editing|Categories can be CRUDed on the back-end|CRUDed a category on the back-end|As expected|![Category CRUD](/docs/images/testing/category-admin-crud.png)|
 |Category front-end|Changes to categories are visible on the front end|Updated a category and checked the front-end|As expected|![Category front-end](/docs/images/testing/category-front-end.png)|
 
+## Colour Contrast
+
+I tested colour contrasts using [colourcontrast.cc](https://colourcontrast.cc/) as the [WebAIM](https://webaim.org/) site was down.
+
+### White + Primary
+
+This combination is used across the site for headings and passes all tests.
+
+![White/primary contrast](/docs/images/testing/contrast/white-primary-blue.png)
+
+### White + Secondary
+
+This combination is mostly used for buttons and passes all tests at the minimum AA standard.
+
+![White/secondary contrast](/docs/images/testing/contrast/white-secondary-blue.png)
+
+### Tertiary + Primary
+
+This combination is used for the header navigation bar, footer text, outline buttons in the hover state and other areas where a light background colour is used. It passes all tests.
+
+![Tertiary/primary contrast](/docs/images/testing/contrast/tertiary-primary.png)
+
+### Tertiary Highlight + Primary
+
+This combination is used in the header navigation bar on hover and it passes all tests.
+
+![Tertiary-highlight/primary contrast](/docs/images/testing/contrast/tertiary-highlight-primary.png)
+
+### Bootstrap Light + Secondary
+
+This combination is used in the premium content info panel and for unapproved comments. It passes all tests at the minimum AA standard.
+
+![BS Light/Secondary](/docs/images/testing/contrast/bs-light-secondary.png)
+
+### Bootstrap Light + Bootstrap Body Color
+
+This combination is used for unapproved comments and it passes all tests.
+
+![BS Light/BS Body](/docs/images/testing/contrast/bs-light-bs-body-color.png)
+
+### Bootstrap Light + Bootstrap Danger
+
+This combination is used for unapproved comments. It only passes the AA Large test, but as this combination is only used with bold test, this is acceptable.
+
+![BS Light/BS Danger](/docs/images/testing/contrast/bs-light-bs-danger.png)
+
+## Responsiveness
+
+### Responsiveness Screenshots
+
+## Browsers
+
+### Browser Screenshots
+
+## Code Validation
+
+### HTML Validation
+
+### CSS Validation
+
+### JavaScript Validation
+
+### Python Validation
+
+## Lighthouse
+
+## Unfixed Bugs

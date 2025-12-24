@@ -164,7 +164,7 @@ The site's colour palette was inspired by the colours used by [Hargreaves Lansdo
 - #0A70DC (medium blue) - The secondary colour
 - #0857AB (darker medium blue) - A "highlight" version of the second colour, primarily used for button hover effects
 - #EFF7FF (very light blue) - The tertiary colour
-- #C2E0FF (darker light blue) - A "highlight" version of the tertiary colour, primarily used for button hover effects
+- #C2E0FF (darker light blue) - A "highlight" version of the tertiary colour, primarily used for hover effects
 
 #### Custom Fonts
 
