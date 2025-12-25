@@ -62,6 +62,7 @@ The Post Detail main content section has no interactive functionality to test.
 
 |Feature|Expect|Action|Result|Image|
 |---|---|---|---|---|
+|No premium content|If a post has no premium content, no sign-up/log-in panel is shown|Viewed a post with no premium content|The sign-up/log-in panel wasn't shown|![Premium content panel not shown](./images/testing/post-detail-premium-content-none.png)|
 |Premium content panel|When the user is logged out and the post contains premium content, the user is shown a sign-up/log-in panel|Viewed a post with premium content as a logged-out user|As expected|![Premium content panel](./images/testing/post-detail-premium-content-panel.png)|
 |Sign-up button|When clicked, the user is taken to the sign-up page|Clicked sign-up button|As expected|None|
 |Log-in button|When clicked, the user is taken to the log-in page|Clicked log-in button|As expected|None|
