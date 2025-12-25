@@ -536,4 +536,18 @@ Python code was validated using the [Code Institute Python Linter](https://pep8c
 
 ## Lighthouse
 
+|Path|Device|Result|
+|---|---|---|
+|/|Mobile|![Home mobile lighthouse results](./images/testing/validation/lighthouse-mobile-home.png)|
+|/|Desktop|![Home desktop lighthouse results](./images/testing/validation/lighthouse-desktop-home.png)|
+|archive/|Mobile|![Archive mobile lighthouse results](./images/testing/validation/lighthouse-mobile-archive.png)|
+|archive/|Desktop|![Archive desktop lighthouse results](./images/testing/validation/lighthouse-desktop-archive.png)|
+|portfolio/|Mobile|![Portfolio mobile lighthouse results](./images/testing/validation/lighthouse-mobile-portfolio.png)|
+|portfolio/|Desktop|![Portfolio desktop lighthouse results](./images/testing/validation/lighthouse-desktop-portfolio.png)|
+|about/|Mobile|![About mobile lighthouse results](./images/testing/validation/lighthouse-mobile-about.png)|
+|about/|Desktop|![About desktop lighthouse results](./images/testing/validation/lighthouse-desktop-about.png)|
+|post-slug/|Mobile|![Post Detail mobile lighthouse results](./images/testing/validation/lighthouse-mobile-post-detail.png)|
+|post-slug/|Desktop|![Post Detail desktop lighthouse results](./images/testing/validation/lighthouse-desktop-post-detail.png)|
+
 ## Unfixed Bugs
+
