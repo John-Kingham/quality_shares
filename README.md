@@ -194,21 +194,79 @@ All model-based content (e.g. blog posts, portfolio page content, etc.) was gene
 
 ## Data Model
 
-### High-Level Entity Relationship Diagram
+### Structure Plane Diagram
 
 During the Structure Plane, I created a structural entitiy relationship diagram, showing potential database tables and their relationships without the detail of individual fields:
 
 ![ERD structural diagram](./docs/images/erd/erd-structure.png)
 
-### Detailed Entity Relationship Diagram
+### Skeleton Plane Diagram
 
-In the Skeleton Plane, I added detail by adding fields to the data model tables that were most likely to be implemented. I also simplified the parts of the model that related to premium blog content, by removing the SubscriptionTier table and replacing it with a Premium Content field in the Post table.
+During the Skeleton Plane, I added detail by adding fields to the data model tables that were most likely to be implemented. I also simplified the parts of the model that related to premium blog content, by removing the SubscriptionTier table and replacing it with a Premium Content field in the Post table.
 
 The fields use generic data types like `string` and `date`, as this diagram is still abstract and not implementation specific (i.e. not trying to represent any specific database type or ORM system).
 
 In the diagram, the Post table has the `category` field as a simple string type, but during the development phase I changed the design to have a separate Category table, with name and description fields and a one-to-many relationship from Category to Post.
 
 ![ERD detail diagram](./docs/images/erd/erd-skeleton.png)
+
+### Implemented Database Schema
+
+During the iterative development phase, there were minor changes to the database schema compared to the earlier structure and skeleton diagrams.
+
+For completeness, here is the final schema:
+
+#### blog.Category Model
+
+|Field|Type|Attributes|
+|---|---|---|
+|name|CharField|max_length=100, unique=True|
+|description|TextField|blank=True|
+
+#### blog.Post Model
+
+|Field|Type|Attributes|
+|---|---|---|
+|author|ForeignKey(User)|on_delete=CASCADE|
+|published|BooleanField|default=False|
+|category|ForeignKey(post.Category)|on_delete=CASCADE, blank=True, null=True|
+|description|CharField|max_length=150, blank=True|
+|content|TextField|blank=True|
+|premium_content|TextField|blank=True|
+|slug|SlugField|max_length=200, unique=True|
+|image|CloudinaryField|default="placeholder"|
+|created|DateTimeField|auto_now_add=True|
+|updated|DateTimeField|auto_now=True|
+
+#### blog.Comment Model
+
+|Field|Type|Attributes|
+|---|---|---|
+|post|ForeignKey(blog.Post)|on_delete=CASCADE|
+|author|ForeignKey(User)|on_delete=CASCADE|
+|content|TextField||
+|approved|BooleanField|default=False|
+|created|DateTimeField|auto_now_add=True|
+
+#### about.About Model
+
+|Field|Type|Attributes|
+|---|---|---|
+|title|CharField|max_length=200, unique=True|
+|image|CloudinaryField|default="placeholder"|
+|image_caption|CharField|max_length=100, blank=True|
+|content|TextField|blank=True|
+|updated|DateTimeField|auto_now=True|
+
+#### portfolio.portfolio Model
+
+|Field|Type|Attributes|
+|---|---|---|
+|title|CharField|max_length=200, unique=True|
+|image|CloudinaryField|default="placeholder"|
+|image_caption|CharField|max_length=100, blank=True|
+|content|TextField|blank=True|
+|updated|DateTimeField|auto_now=True|
 
 ## Technologies Used
 
