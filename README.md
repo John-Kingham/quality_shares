@@ -41,20 +41,20 @@ The strategy plane is centred around discovering the product owner’s and users
   - To build trust with users, so they're more likely to buy products (paid newsletters, e-books, etc.) from Jim in the future.
   - To publish free content for its SEO value and to nurture users with educational and informational content.
   - To make it easy for users to sign up for premium content.
-  - To make it easy for users to subscribe to email newsletters, so we remain top of mind with leads.
+  - To make it easy for users to subscribe to email newsletters, so Jim remains top of mind with leads.
 
 #### User goals
 
 - Primary goal:
   - To improve their investment returns.
 - Supporting goals:
-  - To learn more about investing and become a better investor.
+  - To learn more about investing and become better investors.
   - To have access to information about companies, stock prices and stock markets that will help them make better-informed investing decisions.
   - To discuss investing with like-minded investors.
 
 ### Scope Plane
 
-The scope plane is primarily concerned with defining the project's scope, including what is in scope and what is out of scope.
+The scope plane is primarily concerned with defining the project's scope.
 
 #### Epics
 
@@ -204,9 +204,9 @@ During the Structure Plane, I created a structural entitiy relationship diagram,
 
 In the Skeleton Plane, I added detail by adding fields to the data model tables that were most likely to be implemented. I also simplified the parts of the model that related to premium blog content, by removing the SubscriptionTier table and replacing it with a Premium Content field in the Post table.
 
-The fields use generic data types like string and date, as this diagram is still abstract and not implementation specific (i.e. not trying to represent any specific database type or ORM system).
+The fields use generic data types like `string` and `date`, as this diagram is still abstract and not implementation specific (i.e. not trying to represent any specific database type or ORM system).
 
-In the diagram, the Post table has the category field as a simple string type, but at the implementation stage I changed the design to have a separate Category table, with name and description fields and a one-to-many relationship from Category to Post.
+In the diagram, the Post table has the `category` field as a simple string type, but during the development phase I changed the design to have a separate Category table, with name and description fields and a one-to-many relationship from Category to Post.
 
 ![ERD detail diagram](./docs/images/erd/erd-skeleton.png)
 
@@ -593,7 +593,7 @@ These steps require knowledge of Heroku that is beyond the scope of this documen
 ### Project Management
 
 - I managed the overall project using a simplified combination of [AgilePM](https://www.agilebusiness.org/) and [Scrum](https://www.scrum.org/).
-- I organised the design phase using the 5-Planes/Phases method, as detailed in [The Elements of User Experience](https://uk.bookshop.org/p/books/elements-of-user-experience-the-user-centered-design-for-the-web-and-beyond-jesse-james-garrett/e232e0c9869653bd?ean=9780321683687&next=t&next=t).
+- I organised the design phase using the 5-Planes method, as detailed in [The Elements of User Experience](https://uk.bookshop.org/p/books/elements-of-user-experience-the-user-centered-design-for-the-web-and-beyond-jesse-james-garrett/e232e0c9869653bd?ean=9780321683687&next=t&next=t).
 - I managed the construction phase using [Scrum](https://www.scrum.org/).
 
 ### Strategy Plane
@@ -621,6 +621,23 @@ These steps require knowledge of Heroku that is beyond the scope of this documen
 - I used the colour palette of [Hargreaves Lansdown](https://www.hl.co.uk/) as inspiration for the Quality Shares colour palette.
 - I used the default [Bootstrap](https://getbootstrap.com/) colours for some elements, including light-grey backgrounds and Django message colours.
 
+#### Content
+
+- I used [Microsoft Co-Pilot](https://copilot.microsoft.com/) to generate most of the site's text content.
+
+#### Favicons
+
+- I used [Gauger.io](https://gauger.io/fonticon/) to create a favicon image using its "arrow-trend-up" icon.
+- I used [Favicon.io](https://favicon.io/) to convert the favicon into multiple favicon formats.
+
+#### Fonts
+
+- I used custom fonts from [Google Fonts](https://fonts.google.com/). The exact fonts are listed at the top of this document.
+
+#### Icons
+
+- I used [Font Awesome](https://fontawesome.com/) for social media icons.
+
 #### Images
 
 - I used the following free images from [UnSplash](https://unsplash.com/):
@@ -634,32 +651,19 @@ These steps require knowledge of Heroku that is beyond the scope of this documen
   - [Candlestick chart image](https://unsplash.com/photos/black-flat-screen-computer-monitor-N__BnvQ_w18)
   - [Candlestick chart image 2](https://unsplash.com/photos/red-and-blue-light-streaks-fiXLQXAhCfk)
 
-#### Favicons
-
-- I used [Gauger.io](https://gauger.io/fonticon/) to create a favicon image using its "atom" icon.
-- I used [Favicon.io](https://favicon.io/) to convert the favicon into multiple favicon formats.
-
-#### Fonts
-
-- I used custom fonts from [Google Fonts](https://fonts.google.com/). The exact fonts are listed at the top of this document.
-
-#### Content
-
-- I used [Microsoft Co-Pilot](https://copilot.microsoft.com/) to generate most of the site's text content.
-
 ### Scrum Development Phase
 
 - I used [Visual Studio Code](https://code.visualstudio.com/) as the development environment.
 - I mostly used [Ecosia Search](https://www.ecosia.org/), [W3Schools](https://www.w3schools.com/), [Code Institute](https://codeinstitute.net/), [MDN](https://developer.mozilla.org/) and [Microsoft Copilot](https://copilot.microsoft.com/) for general research.
 - I read parts of [The Epic Guide to Agile](https://www.davetodarobooks.com/) for additional information about Scrum.
-- Although I used various information sources to support the development of this project, no non-trivial code was copy/pasted into the project.
+- Although I used various information sources to support the development of this project, no non-trivial code was copy/pasted into the project, or written by AI.
 
 ### Documentation
 
 - I used [Code Institute's README.md template](https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md) as the starting point for this document.
-- I used [Am I Responsive](https://ui.dev/amiresponsive) to generate the multi-screen image shown at the start of the README.
+- I used [Am I Responsive](https://ui.dev/amiresponsive) to generate the multi-screen image at the start of this document.
 - I used [Green Shot](https://getgreenshot.org/) to add text and arrows to some screenshots.
-- I used [Grammarly]() to check spelling and grammar in README.md and TESTING.md.
+- I used [Grammarly](https://www.grammarly.com/) to check spelling and grammar in README.md and TESTING.md.
 
 ## People
 
