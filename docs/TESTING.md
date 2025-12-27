@@ -556,6 +556,30 @@ Python code was validated using the [Code Institute Python Linter](https://pep8c
 |post-slug/|Mobile|![Post Detail mobile lighthouse results](./images/testing/validation/lighthouse-mobile-post-detail.png)|
 |post-slug/|Desktop|![Post Detail desktop lighthouse results](./images/testing/validation/lighthouse-desktop-post-detail.png)|
 
-## Unfixed Bugs
+## Bugs
+
+### Fixed Bugs
+
+There were many bugs created and squashed throughout the construction phase. Many of these were fixed before the buggy code was commited, and therefore didn't make it into the commit history. Other bugs were fixed after the defect had been committed, so a separate fix commit had to be created. 
+
+Bug fix commits have a commit message prefixed with `fix`, so they're easy to identify within the commit history and are listed here for reference:
+
+- fix: add missing social media links
+- fix: only show published posts
+- fix: add homepage links to site logo and title
+- fix: restore portfolio image caption
+- fix: fix errors with comment html structure
+- fix: make site title visible on mobiles
+- fix: add padding to unapproved comments
+- fix: fix comment form margin
+- fix: fix overlapping unapproved comments
+- fix: remove unnecessary HTML roles and tags
+- fix: fix post detail HTML validation issues
+- fix: fix post archive HTML validation issues
+- fix: fix portfolio and about HTML issues
+- fix: remove empty CSS var() call
+- fix: don't always show the premium content panel
+
+### Unfixed Bugs
 
 There are no unfixed bugs that I am aware of. Having said that, even after thorough testing I cannot completely rule out the possibility of some hidden bugs.
